@@ -1,0 +1,414 @@
+{
+  "schema": "anticloud.tier-bench/1",
+  "project": "PYMATGEN",
+  "source": {
+    "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\CHEMICAL_MANUFACTURING\\PYMATGEN\\UPSTREAM_CLONE",
+    "git": {
+      "head": "",
+      "url": "https://github.com/the-anticloud/OPENMRS_CORE.git",
+      "branch": "master",
+      "committed_at": "2026-09-29T11:06:59+04:00"
+    }
+  },
+  "metrics": {
+    "files_total": 332,
+    "source_files_scanned": 32,
+    "lines_of_code": 41429,
+    "languages": {
+      "(none)": 77,
+      ".gz": 65,
+      ".html": 53,
+      ".png": 18,
+      ".txt": 18,
+      ".doctree": 18,
+      ".py": 17,
+      ".js": 15,
+      ".rst": 14,
+      ".json": 5,
+      ".out": 5,
+      ".xml": 5,
+      ".css": 5,
+      ".ico": 2,
+      ".conf": 2
+    }
+  },
+  "licence": {
+    "spdx": "MIT",
+    "class": "A",
+    "source_file": "LICENSE",
+    "redistribution_allowed": true
+  },
+  "dependencies": {
+    "count": 3,
+    "unique": 3,
+    "by_ecosystem": {
+      "pypi": 3
+    },
+    "list": [
+      {
+        "ecosystem": "pypi",
+        "name": "monty",
+        "version": ">=2025.3.3",
+        "source_file": "pyproject.toml",
+        "raw": "monty>=2025.3.3"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "pymatgen",
+        "version": ">=2025.3.10",
+        "source_file": "pyproject.toml",
+        "raw": "pymatgen>=2025.3.10"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "pymongo",
+        "version": ">=4.11.3",
+        "source_file": "pyproject.toml",
+        "raw": "pymongo>=4.11.3"
+      }
+    ]
+  },
+  "owasp_top10": {
+    "total_findings": 21,
+    "files_with_findings": 14,
+    "severity": {
+      "high": 8,
+      "medium": 0,
+      "low": 13
+    },
+    "categories": {
+      "A01-BrokenAccessControl": {
+        "count": 0,
+        "findings": []
+      },
+      "A02-CryptographicFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A03-Injection": {
+        "count": 8,
+        "findings": [
+          {
+            "severity": "high",
+            "file": "src/pymatgen/db/__init__.py",
+            "line": 28,
+            "cwe": "CWE-502",
+            "snippet": "d = yaml.load(f)"
+          },
+          {
+            "severity": "high",
+            "file": "docs/_static/jquery-3.1.0.js",
+            "line": 788,
+            "cwe": "CWE-95",
+            "snippet": "if ( nodeType !== 11 && (match = rquickExpr.exec( selector )) ) {"
+          },
+          {
+            "severity": "high",
+            "file": "docs/_static/jquery-3.2.1.js",
+            "line": 782,
+            "cwe": "CWE-95",
+            "snippet": "if ( nodeType !== 11 && (match = rquickExpr.exec( selector )) ) {"
+          },
+          {
+            "severity": "high",
+            "file": "docs/_static/jquery-3.5.1.js",
+            "line": 780,
+            "cwe": "CWE-95",
+            "snippet": "if ( nodeType !== 11 && ( match = rquickExpr.exec( selector ) ) ) {"
+          },
+          {
+            "severity": "high",
+            "file": "docs/_static/jquery.js",
+            "line": 2,
+            "cwe": "CWE-95",
+            "snippet": "!function(e,t){\"use strict\";\"object\"==typeof module&&\"object\"==typeof module.exports?module.exports=e.document?t(e,!0):function(e){if(!e.document)throw new Error(\"jQuery requires a"
+          },
+          {
+            "severity": "high",
+            "file": "docs/_static/language_data.js",
+            "line": 98,
+            "cwe": "CWE-95",
+            "snippet": "var fp = re.exec(w);"
+          },
+          {
+            "severity": "high",
+            "file": "docs/_static/underscore.js",
+            "line": 6,
+            "cwe": "CWE-78",
+            "snippet": "var n=\"1.13.1\",r=\"object\"==typeof self&&self.self===self&&self||\"object\"==typeof global&&global.global===global&&global||Function(\"return this\")()||{},t=Array.prototype,e=Object.pr"
+          },
+          {
+            "severity": "high",
+            "file": "docs/_static/websupport.js",
+            "line": 19,
+            "cwe": "CWE-78",
+            "snippet": "$(textarea)"
+          }
+        ]
+      },
+      "A04-InsecureDesign": {
+        "count": 7,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "src/pymatgen/db/cli.py",
+            "line": 197,
+            "cwe": "CWE-",
+            "snippet": "# TODO: document this 'feature' --dang 4/4/2013"
+          },
+          {
+            "severity": "low",
+            "file": "src/pymatgen/db/query_engine.py",
+            "line": 438,
+            "cwe": "CWE-",
+            "snippet": "# TODO: clean up prop_dict?"
+          },
+          {
+            "severity": "low",
+            "file": "docs_rst/conf.py",
+            "line": 17,
+            "cwe": "CWE-",
+            "snippet": "# If extensions (or modules to document with autodoc) are in another directory,"
+          },
+          {
+            "severity": "low",
+            "file": "docs/searchindex.js",
+            "line": 1,
+            "cwe": "CWE-",
+            "snippet": "Search.setIndex({\"docnames\": [\"_themes/README\", \"builders\", \"change_log\", \"dbconfig\", \"index\", \"mgvv\", \"modules\", \"pymatgen\", \"pymatgen.db\", \"pymatgen.db.alchemy\", \"pymatgen.db.bui"
+          },
+          {
+            "severity": "low",
+            "file": "docs/_static/jquery-3.1.0.js",
+            "line": 798,
+            "cwe": "CWE-",
+            "snippet": "// TODO: identify versions"
+          },
+          {
+            "severity": "low",
+            "file": "docs/_static/jquery-3.2.1.js",
+            "line": 792,
+            "cwe": "CWE-",
+            "snippet": "// TODO: identify versions"
+          },
+          {
+            "severity": "low",
+            "file": "docs/_static/jquery-3.5.1.js",
+            "line": 790,
+            "cwe": "CWE-",
+            "snippet": "// TODO: identify versions"
+          }
+        ]
+      },
+      "A05-SecurityMisconfiguration": {
+        "count": 0,
+        "findings": []
+      },
+      "A06-VulnerableComponents": {
+        "count": 0,
+        "findings": []
+      },
+      "A07-AuthFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A08-SoftwareDataIntegrity": {
+        "count": 6,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "docs/_static/jquery-3.1.0.js",
+            "line": 551,
+            "cwe": "CWE-319",
+            "snippet": "* http://jquery.org/license"
+          },
+          {
+            "severity": "low",
+            "file": "docs/_static/jquery-3.2.1.js",
+            "line": 545,
+            "cwe": "CWE-319",
+            "snippet": "* http://jquery.org/license"
+          },
+          {
+            "severity": "low",
+            "file": "docs/_static/jquery-3.5.1.js",
+            "line": 595,
+            "cwe": "CWE-319",
+            "snippet": "// http://www.w3.org/TR/css3-selectors/#whitespace"
+          },
+          {
+            "severity": "low",
+            "file": "docs/_static/jquery.js",
+            "line": 2,
+            "cwe": "CWE-",
+            "snippet": "!function(e,t){\"use strict\";\"object\"==typeof module&&\"object\"==typeof module.exports?module.exports=e.document?t(e,!0):function(e){if(!e.document)throw new Error(\"jQuery requires a"
+          },
+          {
+            "severity": "low",
+            "file": "docs/_static/sphinx_highlight.js",
+            "line": 25,
+            "cwe": "CWE-319",
+            "snippet": "span = document.createElementNS(\"http://www.w3.org/2000/svg\", \"tspan\");"
+          },
+          {
+            "severity": "low",
+            "file": "docs/_static/underscore-1.3.1.js",
+            "line": 7,
+            "cwe": "CWE-319",
+            "snippet": "//     http://documentcloud.github.com/underscore"
+          }
+        ]
+      },
+      "A09-LoggingMonitoringFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A10-SSRF": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "owasp_llm_top10": {
+    "total_findings": 4,
+    "files_with_findings": 4,
+    "severity": {
+      "high": 3,
+      "medium": 1,
+      "low": 0
+    },
+    "categories": {
+      "LLM01-PromptInjection": {
+        "count": 1,
+        "findings": [
+          {
+            "severity": "medium",
+            "file": "docs/_static/websupport.js",
+            "line": 151,
+            "cwe": "CWE-1336",
+            "snippet": "var popup = $(renderTemplate(popupTemplate, context)).hide();"
+          }
+        ]
+      },
+      "LLM02-SensitiveInfoDisclosure": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM03-SupplyChain": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM04-DataPoisoning": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM05-ImproperOutputHandling": {
+        "count": 3,
+        "findings": [
+          {
+            "severity": "high",
+            "file": "docs/_static/jquery-3.1.0.js",
+            "line": 8764,
+            "cwe": "CWE-95",
+            "snippet": "while ( ( match = rheaders.exec( responseHeadersString ) ) ) {"
+          },
+          {
+            "severity": "high",
+            "file": "docs/_static/jquery-3.2.1.js",
+            "line": 8938,
+            "cwe": "CWE-95",
+            "snippet": "while ( ( match = rheaders.exec( responseHeadersString ) ) ) {"
+          },
+          {
+            "severity": "high",
+            "file": "docs/_static/jquery-3.5.1.js",
+            "line": 9444,
+            "cwe": "CWE-95",
+            "snippet": "while ( ( match = rheaders.exec( responseHeadersString ) ) ) {"
+          }
+        ]
+      },
+      "LLM06-ExcessiveAgency": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM07-SystemPromptLeak": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM08-VectorEmbeddingWeaknesses": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM09-Misinformation": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM10-UnboundedConsumption": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "sbom": {
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.5",
+    "serialNumber": "urn:uuid:ddaa0aa3-d7b5-5ad4-b06c-40f7adbab44d",
+    "version": 1,
+    "metadata": {
+      "timestamp": "2026-10-06T08:04:07Z",
+      "component": {
+        "type": "application",
+        "name": "PYMATGEN",
+        "version": "83b357604d34",
+        "bom-ref": "pkg:generic/anticloud/PYMATGEN@83b357604d34",
+        "purl": "pkg:generic/anticloud/PYMATGEN@83b357604d34",
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "anticloud:source-commit",
+          "value": ""
+        },
+        {
+          "name": "anticloud:source-url",
+          "value": "https://github.com/the-anticloud/OPENMRS_CORE.git"
+        },
+        {
+          "name": "anticloud:tier",
+          "value": "tier-agent"
+        }
+      ]
+    },
+    "components": [
+      {
+        "type": "library",
+        "name": "monty",
+        "version": ">=2025.3.3",
+        "purl": "pkg:pypi/monty@2025.3.3",
+        "bom-ref": "pypi/monty@>=2025.3.3"
+      },
+      {
+        "type": "library",
+        "name": "pymatgen",
+        "version": ">=2025.3.10",
+        "purl": "pkg:pypi/pymatgen@2025.3.10",
+        "bom-ref": "pypi/pymatgen@>=2025.3.10"
+      },
+      {
+        "type": "library",
+        "name": "pymongo",
+        "version": ">=4.11.3",
+        "purl": "pkg:pypi/pymongo@4.11.3",
+        "bom-ref": "pypi/pymongo@>=4.11.3"
+      }
+    ]
+  },
+  "elapsed_seconds": 3.5
+}
